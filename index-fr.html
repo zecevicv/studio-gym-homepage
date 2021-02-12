@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudioGym">
+  <title>StudioGym — Homepage</title>
+
+  <!-- Style (Vendor) -->
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/homepage.css">
+
+</head>
+
+<body ng-class="{&#39;sg-site-sidebar-opened&#39;: UI.sidebarOpened, &#39;sg-no-scroll&#39;: UI.disableBodyScroll}"
+  data-app-route="studio_gym_app_homepage" data-app-path-info="/" data-app-login-state="false"
+  data-app-login-page-path="/login" data-new-gr-c-s-check-loaded="14.994.0" data-gr-ext-installed=""
+  cz-shortcut-listen="true">
+
+  <!-- Header -->
+  <header match-height-of="#sg-main-navbar" style="height: 64px;">
+    <nav class="navbar bg-studiogym sg-navbar fixed-top" id="sg-main-navbar">
+      <button class="navbar-toggler" type="button" ng-click="UI.sidebarOpened = !UI.sidebarOpened"
+        aria-controls="sg-site-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="sg-navbar-brand-spacer ml-auto mr-auto">
+        <a class="navbar-brand" href="https://studiogym.com/">Find, create and share your exercises and personal
+          training programs</a>
+      </div>
+      <ul class="navbar-nav sg-navbar-nav-always-expanded sg-navbar-right">
+        <li class="nav-item login-btn ml-auto mr-3">
+          <a class="nav-link" href="https://studiogym.com/login">
+            <i class="fa fa-user-circle d-sm-none"></i> <span class="d-none d-sm-inline">Login</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-lang dropdown-toggle" href="https://studiogym.com/#" id="sgNavbarLocaleMenuLink"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-globe d-sm-none"></i> <span class="d-none d-sm-inline">FR</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sgNavbarLocaleMenuLink">
+            <a class="dropdown-item" href="https://studiogym.com/">EN</a>
+            <a class="dropdown-item" href="https://studiogym.com/fr/">FR</a>
+          </div>
+        </li>
+      </ul>
+      <div class="resize-triggers">
+        <div class="expand-trigger">
+          <div style="width: 1904px; height: 65px;"></div>
+        </div>
+        <div class="contract-trigger"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sg-site-sidebar">
+    <nav class="navbar bg-studiogym sg-navbar flex-0" match-height-of="#sg-main-navbar" style="height: 64px;">
+      <ul class="navbar-nav sg-navbar-nav-always-expanded w-100">
+        <li class="nav-item w-100">
+          <a class="nav-link text-uppercase" ng-click="$event.preventDefault();UI.sidebarOpened = false"
+            href="https://studiogym.com/#">Close <i class="fa fa-chevron-right ml-1"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="sg-site-sidebar-nav-container flex-1">
+      <ul class="nav flex-column">
+
+        <li class="nav-item nav-group-title">
+          Program
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/programs">Search programs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/programs/add">Create a program</a>
+        </li>
+
+        <li class="nav-item nav-group-title">
+          Exercise
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/exercises">Search exercises</a>
+        </li>
+        <li class="nav-item">
+          <i class="sg-icon-inline sg-icon-crown--black"></i>
+          <a class="nav-link" href="https://studiogym.com/exercises/add">Add exercise</a>
+        </li>
+
+        <li class="nav-item nav-group-title">
+          Articles
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/articles">Search Articles</a>
+        </li>
+
+        <li class="nav-item nav-group-title">
+          Profile
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/profile">Free Profile</a>
+        </li>
+        <li class="nav-item">
+          <i class="sg-icon-inline sg-icon-crown--black"></i>
+          <a class="nav-link" href="https://studiogym.com/profile/upgrade/learn-more">Upgrade to Member</a>
+        </li>
+        <li class="nav-item">
+          <i class="sg-icon-inline sg-icon-crown--black"></i>
+          <a class="nav-link" href="https://studiogym.com/profile/upgrade/learn-more">Learn more about
+            PREMIUM</a>
+        </li>
+
+        <li class="nav-item nav-group-title">
+          About us
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/">Presentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/contact">Contact</a>
+        </li>
+
+        <li class="nav-item nav-group-title">
+          Legal
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/aptitute-test">Aptitude test</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/privacy">Privacy policy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://studiogym.com/terms">Terms of use</a>
+        </li>
+
+      </ul>
+      <div class="sg-site-sidebar-social mt-3">
+        <div class="sg-social-presence">
+          <div class="sg-social-presence-item">
+            <a class="sg-social-presence-link" href="https://www.facebook.com/studiogym/" target="_blank"
+              rel="noopener">
+              <i class="fa fa-facebook-official"></i><span class="sr-only">Facebook</span>
+            </a>
+          </div>
+          <div class="sg-social-presence-item">
+            <a class="sg-social-presence-link" href="https://www.twitter.com/studiogym/" target="_blank" rel="noopener">
+              <i class="fa fa-twitter"></i><span class="sr-only">Twitter</span>
+            </a>
+          </div>
+          <div class="sg-social-presence-item">
+            <a class="sg-social-presence-link" href="https://www.pinterest.com/studiogym/" target="_blank"
+              rel="noopener">
+              <i class="fa fa-pinterest"></i><span class="sr-only">Pinterest</span>
+            </a>
+          </div>
+          <div class="sg-social-presence-item">
+            <a class="sg-social-presence-link" href="https://instagram.com/studiogym.official" target="_blank"
+              rel="noopener">
+              <i class="fa fa-instagram"></i><span class="sr-only">Instagram</span>
+            </a>
+          </div>
+          <div class="sg-social-presence-item">
+            <a class="sg-social-presence-link" href="https://www.youtube.com/channel/UCya4BjAuqC4IkMbLB4m0rGg"
+              target="_blank" rel="noopener">
+              <i class="fa fa-youtube-play"></i><span class="sr-only">YouTube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Viewport Container -->
+  <div class="sg-viewport-container">
+    <!-- Main -->
+    <main id="sg-main" class="sg-main" role="main">
+      <div class="container-fluid p-0 sg-homepage" data-app-view="homepage">
+
+        <!-- Hero -->
+        <div class="hero">
+          <div class="hero-top">
+            <!-- Video Desktop -->
+            <video autoplay loop muted playsinline preload="metadata" class="d-none d-md-block"
+              poster="img/hero-video-poster.jpg">
+              <source src="video/hero-video-fr.mp4" type="video/mp4">
+            </video>
+            <!-- Video Mobile -->
+            <video autoplay loop muted playsinline preload="metadata" class="d-md-none">
+              <source src="video/hero-video-fr-mobile.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="hero-bottom">
+            <button class="home-btn btn-large">COMMENCEZ MAINTENANT</button>
+          </div>
+        </div>
+
+        <!-- Phone Videos -->
+        <div class="phone-videos" id="phoneVideos">
+          <div class="container">
+            <!-- Phone Left -->
+            <div class="phone-left">
+              <video autoplay loop muted playsinline preload="metadata" poster="img/phone-left.jpg" data-aos="fade-up" data-aos-anchor="#phoneVideos" data-aos-delay="250">
+                <source src="video/phone-left.mp4" type="video/mp4">
+              </video>
+            </div>
+            <!-- Phone Center -->
+            <div class="phone-center">
+              <video autoplay loop muted playsinline preload="metadata" poster="img/phone-center.jpg">
+                <source src="video/phone-center.mp4" type="video/mp4">
+              </video>
+            </div>
+            <!-- Phone Rignt -->
+            <div class="phone-right">
+              <video autoplay loop muted playsinline preload="metadata" poster="img/phone-right.jpg" data-aos="fade-up" data-aos-anchor="#phoneVideos">
+                <source src="video/phone-right.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h1>EN DIRECT<br> AVEC DES AMIS</h1>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="features">
+          <div class="container">
+            <p>
+              Avec ses exercices démontrés en trois dimensions, STUDIOGYM rend le suivi
+              des programmes d’entraînement beaucoup plus facile et clair. Faites votre
+              entraînement avec votre mobile ou ordinateur seul, ou donner rendez-vous à
+              des amis pour le pratiquer ensemble pour encore plus de plaisir.
+            </p>
+            <!-- Swiper -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div data-aos="fade-up">
+                    <img src="img/live-results-fr.jpg" alt="live-results">
+                    <p>RÉSULTATS EN DIRECT</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div data-aos="fade-up" data-aos-delay="150">
+                    <img src="img/video-calls-en.jpg" alt="video-calls">
+                    <p>VIDÉO CONFÉRENCE</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div data-aos="fade-up" data-aos-delay="300">
+                    <img src="img/instant-messaging-fr.jpg" alt="instant-messaging">
+                    <p>MESSAGERIE INSTANTANÉE</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Membership -->
+        <div class="membership">
+          <div class="container">
+            <!-- List -->
+            <div class="list">
+              <h2>L’ABONNEMENT PREMIUM COMPREND</h2>
+              <ul>
+                <li>
+                  <img src="img/checkbox.svg" alt="checkbox">
+                  Accès à plus de 120 programmes classés par objectif, durée et calories.
+                </li>
+                <li>
+                  <img src="img/checkbox.svg" alt="checkbox">
+                  Participer et organiser des entraînements live (vidéoconférence, résultats compétitifs et messagerie).
+                </li>
+                <li>
+                  <img src="img/checkbox.svg" alt="checkbox">
+                  Enregistrer vos sessions d’entraînement avec calcul de calorie et muscles sollicités.
+                </li>
+                <li>
+                  <img src="img/checkbox.svg" alt="checkbox">
+                  Créer, modifier et partager des programmes d’entraînement.
+                </li>
+                <li>
+                  <img src="img/checkbox.svg" alt="checkbox">
+                  Rabais membre sur de l’équipement.
+                </li>
+              </ul>
+            </div>
+            <!-- Price Card -->
+            <div class="price-card">
+              <div class="price-card-top">
+                <img src="img/price-card-fr.png" alt="price-card">
+              </div>
+              <div class="price-card-bottom">
+                POUR UN TEMPS LIMITÉ, 30% DE RABAIS.
+              </div>
+            </div>
+            <!-- Subscribe -->
+            <div class="subscribe">
+              <span></span>
+              <button class="home-btn btn-green btn-large">S’ABONNER</button>
+              <p>*Prix avec abonnement annuel:<br> 1 paiement de 95,64$.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Challenges -->
+        <div class="challenges">
+          <div class="bg-img">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/challenges-fr.jpg">
+              <source media="(min-width:768px)" srcset="img/challenges-fr-tablet.jpg">
+              <img src="img/challenges-fr-mobile.jpg" alt="bg-img">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="text">
+              <h2>CHALLENGES SUR MESURE</h2>
+              <p>Choisissez parmi plus d’une centaine de programmes d’entraînement pour tous les objectifs et niveaux. Vous pouvez les modifier et même en créer-un de toute pièce.</p>
+              <img src="img/scale-fr.png" alt="scale-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- Essentials -->
+        <div class="essentials">
+          <div class="container">
+            <h2><span>PRIX MEMBRE</span> SUR DES ESSENTIELS</h2>
+            <!-- Swiper -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/essential-1.jpg" alt="essentials-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/essential-2.jpg" alt="essentials-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/essential-3.jpg" alt="essentials-img">
+                </div>
+              </div>
+            </div>
+            <p>Les membres de STUDIOGYM ont accès à des rabais sur de l’équipements et des items spécialement choisis par notre équipe.</p>
+          </div>
+        </div>
+
+        <!-- Starting Kit -->
+        <div class="starting-kit">
+          <div class="bg-img">
+            <picture>
+              <source media="(min-width:992px)" srcset="img/starting-kit.jpg">
+              <source media="(min-width:768px)" srcset="img/starting-kit-tablet.jpg">
+              <img src="img/starting-kit-mobile.jpg" alt="starting-kit">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="starting-kit-box">
+              <div class="text">
+                <h2>KIT DE DÉPART</h2>
+                <p>4 bandes élastiques,<br>
+                  3 mini-bandes, ballon, tapis,<br>
+                  support à téléphone</p>
+              </div>
+              <div class="prices">
+                <div class="price-1">
+                  <h3>PRIX MEMBRE</h3>
+                  <img src="img/starting-kit-price-fr.png" alt="price">
+                </div>
+                <div class="price-2">
+                  <h3>VALEUR</h3>
+                  <img src="img/starting-kit-value-fr.png" alt="value">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform -->
+        <div class="platform">
+          <div class="container">
+            <h2>STUDIOGYM, C’EST UNE PLATEFORME D’ENTRAÎNEMENT <span>PERSONNALISÉE</span>.</h2>
+            <div class="platform-grid">
+              <!-- Item -->
+              <div class="platform-grid-item">
+                <div class="img">
+                  <img src="img/platform-3d.gif" alt="360-degree-exercises">
+                </div>
+                <div class="text">
+                  <h3>EXERCICES EN 360 DEGRÉS</h3>
+                  <p>Comprenez le mouvement comme
+                    jamais grâce à l’interactivité qui permet
+                    de regarder les exercices sous tous les angles.</p>
+                </div>
+              </div>
+              <!-- Item -->
+              <div class="platform-grid-item alt">
+                <div class="img">
+                  <img src="img/platform-program-fr.gif" alt="build-your-own-program">
+                </div>
+                <div class="text">
+                  <h3>CONSTRUIRE VOTRE PROGRAMME</h3>
+                  <p>Vous n’avez pas trouvé le programme parfait?
+                    Créez-le de toute pièce ou modifiez-en un.</p>
+                </div>
+              </div>
+              <!-- Item -->
+              <div class="platform-grid-item">
+                <div class="img">
+                  <img src="img/platform-training-fr.jpg" alt="smart-training">
+                </div>
+                <div class="text">
+                  <h3>ENTRAÎNEMENT INTELLIGENT</h3>
+                  <p>Enregistrez vos sessions d'entraînement.
+                    Conservez les muscles sollicités et
+                    calculez les calories dépensées.</p>
+                </div>
+              </div>
+              <!-- Item -->
+              <div class="platform-grid-item alt">
+                <div class="img">
+                  <img src="img/platform-muscle-map.png" alt="interactive-muscle-map">
+                </div>
+                <div class="text">
+                  <h3>CARTE INTERACTIVE DES MUSCLES</h3>
+                  <p>Pour chaque exercice, vous avez une carte
+                    des muscles sollicités. Cliquez sur les
+                    régions pour découvrir les exercices qui
+                    travaillent précisément ces muscles.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="reviews">
+          <div class="container">
+            <h2>TÉMOIGNAGES DES MEMBRES</h2>
+            <!-- Swiper -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/user-1.jpg" alt="user">
+                  <h3>Fanny G.</h3>
+                  <p>« Le personnage en 3D que tu peux
+                    regarder dans tous les sens aide
+                    vraiment à bien comprendre les
+                    exercices. Mon copain et moi avons
+                    chacun trouvé le programme parfait
+                    pour nos objectifs et notre niveau.</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/user-2.jpg" alt="user">
+                  <h3>Thithu V.</h3>
+                  <p>« Je me suis remise à l’entraînement
+                    grace à un articles de STUDIOGYM.
+                    J’avais un intérêt pour le cardio, mais
+                    maintenant je fais de la musculation
+                    chez moi sans avoir besoin
+                    d’équipement.</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/user-3.jpg" alt="user">
+                  <h3>Eric J.</h3>
+                  <p>« La motivation était difficile jusqu’à je
+                    découvre les entraînements en direct de
+                    STUDIOGYM. Mes amis et moi nous
+                    donnons rendez-vous deux fois par
+                    semaine. Ça remplace l’ambiance qu’on
+                    avait au gym.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="pricing">
+          <div class="container">
+            <!-- Price Box -->
+            <div class="price-box">
+              <div class="price-card">
+                <h3>PRIX MENSUEL</h3>
+                <img src="img/pricing-monthly-fr.png" alt="pricing" class="price-img">
+                <button class="home-btn btn-green">S’ABONNER</button>
+              </div>
+              <p>**Abonnement mensuel de 14,97$,<br> renouvelé à chaque mois.</p>
+            </div>
+            <!-- Price Box -->
+            <div class="price-box price-box-alt">
+              <div class="price-card">
+                <h3>ANNUAL FEE</h3>
+                <img src="img/pricing-annual-fr.png" alt="pricing" class="price-img">
+                <img src="img/pricing-discount-fr.png" alt="discount" class="price-discount">
+                <button class="home-btn btn-brown">S’ABONNER</button>
+              </div>
+              <p>*Prix avec abonnement annuel :<br> 1 paiement de 95,64$.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guarantee -->
+        <div class="guarantee">
+          <div class="container">
+            <!-- Img -->
+            <div class="img">
+              <img src="img/guarantee.png" alt="guarantee">
+            </div>
+            <!-- Text -->
+            <div class="text">
+              <h2>SATISFACTION GARANTIE À 100%</h2>
+              <p>Chez Studiogym, nous ferons tout notre possible pour que vous soyez entièrement satisfaits de nos services. Nous
+                offrons à nos clients une garantie de satisfaction à 100%*. Si vous n’êtes pas entièrement satisfait(e) de la qualité de
+                nos services, veuillez nous écrire dans les trente (30) jours suivants votre achat et nous ferons tout ce qui est en notre
+                pouvoir afin de corriger la situation. *La garantie de satisfaction est conditionnelle à ce que le client ait complété au
+                moins une session complète d’entraînement. La responsabilité maximale de Studiogym est limitée au remboursement
+                du montant payé par le client.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="sg-footer">
+      <div class="sg-footer-top">
+        <div class="sg-footmenu sg-footer-block">
+          <div class="sg-footmenu-group">
+            <div class="sg-footer-headline">Program</div>
+            <a class="sg-footmenu-link" href="https://studiogym.com/programs">Program search</a>
+            <a class="sg-footmenu-link" href="https://studiogym.com/programs/add">Create a program</a>
+          </div>
+          <div class="sg-footmenu-group">
+            <div class="sg-footer-headline">Exercise</div>
+            <a class="sg-footmenu-link" href="https://studiogym.com/exercises">Exercise search</a>
+            <a class="sg-footmenu-link" href="https://studiogym.com/exercises/add">Add an exercise</a>
+          </div>
+          <div class="sg-footmenu-group">
+            <div class="sg-footer-headline">Articles</div>
+            <a class="sg-footmenu-link" href="https://studiogym.com/articles">Article search</a>
+          </div>
+          <div class="sg-footmenu-group">
+            <div class="sg-footer-headline">Profile</div>
+            <a class="sg-footmenu-link" href="https://studiogym.com/profile">My profile</a>
+            <a class="sg-footmenu-link" href="https://studiogym.com/profile/upgrade/learn-more">Premium</a>
+          </div>
+          <div class="sg-footmenu-group">
+            <div class="sg-footer-headline">Coach</div>
+            <a class="sg-footmenu-link" href="#">Find a coach</a>
+            <a class="sg-footmenu-link" href="#">Become a coach</a>
+          </div>
+          <div class="sg-footmenu-group">
+            <div class="sg-footer-headline">Store</div>
+            <a class="sg-footmenu-link" href="#">Equipment</a>
+            <a class="sg-footmenu-link" href="#">Clothing</a>
+          </div>
+        </div>
+        <div class="sg-footer-social sg-footer-block">
+          <div class="sg-footer-social-links">
+            <div class="sg-social-presence">
+              <div class="sg-social-presence-item">
+                <a class="sg-social-presence-link" href="https://www.facebook.com/studiogym/" target="_blank"
+                  rel="noopener">
+                  <i class="fa fa-facebook-official"></i><span class="sr-only">Facebook</span>
+                </a>
+              </div>
+              <div class="sg-social-presence-item">
+                <a class="sg-social-presence-link" href="https://www.twitter.com/studiogym/" target="_blank"
+                  rel="noopener">
+                  <i class="fa fa-twitter"></i><span class="sr-only">Twitter</span>
+                </a>
+              </div>
+              <div class="sg-social-presence-item">
+                <a class="sg-social-presence-link" href="https://www.pinterest.com/studiogym/" target="_blank"
+                  rel="noopener">
+                  <i class="fa fa-pinterest"></i><span class="sr-only">Pinterest</span>
+                </a>
+              </div>
+              <div class="sg-social-presence-item">
+                <a class="sg-social-presence-link" href="https://instagram.com/studiogym.official" target="_blank"
+                  rel="noopener">
+                  <i class="fa fa-instagram"></i><span class="sr-only">Instagram</span>
+                </a>
+              </div>
+              <div class="sg-social-presence-item">
+                <a class="sg-social-presence-link" href="https://www.youtube.com/channel/UCya4BjAuqC4IkMbLB4m0rGg"
+                  target="_blank" rel="noopener">
+                  <i class="fa fa-youtube-play"></i><span class="sr-only">YouTube</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sg-footer-bottom">
+        <div class="sg-footer-legallinks sg-footer-block">
+          <a class="sg-legallinks-item" href="https://studiogym.com/aptitute-test">Aptitude test</a>
+          <a class="sg-legallinks-item" href="https://studiogym.com/privacy">Privacy policy</a>
+          <a class="sg-legallinks-item" href="https://studiogym.com/terms">Terms of use</a>
+        </div>
+        <div class="sg-footer-copyright sg-footer-block">
+          © 2021 STUDIOGYM. All rights reserved. STUDIOGYM<sup>TM</sup> is a registered trademark of Studiogym.inc.
+        </div>
+        <div class="sg-footer-legalnotice sg-footer-block">
+          NOTE: There is no guarantee of specific results and results may vary from one person to another.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Script (Vendor) -->
+  <script src="js/aos.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- Script -->
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+
+</html>
