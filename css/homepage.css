@@ -159,15 +159,46 @@
   color: #a4c408;
 }
 
+/* #Swiper Pagination
+================================================== */
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-custom, 
+.swiper-pagination-fraction {
+  bottom: -35px;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgb(36, 36, 36);
+}
+
+@media (max-width: 767.98px) {
+  .swiper-pagination {
+    display: block;
+  }
+}
+
 /* #Hero
 ================================================== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 62px);
+  overflow: hidden;
+}
+
 .hero-top {
   display: flex;
+  height: calc(100% - 140px);
 }
 
 .hero-top video {
   width: 100%;
-  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-bottom {
@@ -175,7 +206,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 48px 0;
+  padding: 35px 0;
+}
+
+@media (max-width: 767.98px) {
+  .hero-top {
+    height: calc(100% - 100px);
+  }
+
+  .hero-bottom {
+    padding: 20px 0;
+  }
+
+  .hero .home-btn.btn-large {
+    height: 60px;
+  }
 }
 
 /* #Phone Videos
@@ -242,11 +287,15 @@
 
 @media (max-width: 991.98px) {
   .phone-videos .phone-center {
-    margin-bottom: 400px;
+    margin-bottom: 800px;
   }
 
   .phone-videos .phone-left {
-    top: 60%;
+    top: 45%;
+  }
+
+  .phone-videos .phone-right {
+    top: 50%;
   }
 }
 
@@ -258,18 +307,18 @@
   .phone-videos .phone-left {
     max-width: 200px;
     left: 15px;
-    top: 75%;
+    top: 47%;
   }
 
   .phone-videos .phone-center {
     max-width: 200px;
-    margin-bottom: 450px;
+    margin-bottom: 550px;
   }
 
   .phone-videos .phone-right {
     max-width: 200px;
     right: 15px;
-    top: 62%;
+    top: 57%;
   }
 }
 
@@ -306,9 +355,11 @@
 .features .swiper-slide p {
   text-transform: uppercase;
   font-size: 18px;
+  margin-bottom: 0;
 }
 
-.features img {
+.features img,
+.features video {
   border-radius: 50%;
   width: 100%;
   max-width: 250px;
@@ -482,6 +533,7 @@
   .membership .list,
   .membership .price-card {
     margin-bottom: 50px;
+    max-width: 360px;
   }
 
   .membership .subscribe button,
@@ -554,30 +606,24 @@
   width: 100%;
 }
 
-@media (max-width: 1199.98px) {
-  .challenges .text {
-    max-width: 450px;
-    margin-right: 0;
-  }
-
+@media (max-width: 1399.98px) {
   .challenges h2 {
     margin-bottom: 15px;
   }
-
+  
   .challenges p {
     margin-bottom: 30px;
   }
 }
 
-@media (max-width: 767.98px) {
-  .challenges .container {
-    top: 75%;
-  }
-
+@media (max-width: 1199.98px) {
   .challenges .text {
-    margin: 0 auto;
+    max-width: 450px;
+    margin-right: 0;
   }
+}
 
+@media (max-width: 991.98px) {
   .challenges h2 {
     font-size: 38px;
   }
@@ -585,15 +631,46 @@
   .challenges p {
     font-size: 18px;
   }
+
+  .challenges .text img {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .challenges .container {
+    top: 78%;
+  }
+
+  .challenges .text {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 575.98px) {
-  .challenges .container {
-    top: 70%;
+  .challenges .text img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .challenges h2 {
+    font-size: 32px;
+  }
+
+  .challenges p {
+    font-size: 16px;
+    line-height: 1.2;
   }
 
   .challenges .text img {
-    max-width: 220px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 319.98px) {
+  .challenges .container {
+    top: 70%;
   }
 }
 
@@ -608,10 +685,13 @@
 .essentials h2 {
   font-size: 55px;
   margin-bottom: 100px;
+  line-height: 1.5;
 }
 
 .essentials h2 span {
-  text-decoration: underline;
+  position: relative;
+  line-height: 1;
+  border-bottom: 8px solid #212529;
 }
 
 .essentials .swiper-container {
@@ -639,6 +719,10 @@
 @media (max-width: 767.98px) {
   .essentials {
     padding: 60px 0;
+  }
+
+  .essentials .swiper-container {
+    overflow: visible;
   }
 
   .essentials h2 {
@@ -680,7 +764,7 @@
 
 .starting-kit-box {
   background-color: white;
-  max-width: 345px;
+  max-width: 300px;
   border: 10px solid #231f20;
   margin-left: auto;
   margin-right: 15px;
@@ -689,7 +773,7 @@
 .starting-kit .text {
   max-width: 230px;
   margin: 0 auto;
-  padding: 30px 0 15px 0;
+  padding: 20px 0;
 }
 
 .starting-kit h2 {
@@ -701,6 +785,7 @@
   font-family: 'arial', sans-serif;
   font-size: 18px;
   line-height: 1.3;
+  margin: 0;
 }
 
 .starting-kit .prices {
@@ -715,7 +800,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 20px 0;
+  padding: 15px 10px;
 }
 
 .starting-kit .price-1 {
@@ -750,10 +835,13 @@
   font-size: 44px;
   max-width: 590px;
   margin: 0 auto 135px auto;
+  line-height: 1.5;
 }
 
 .platform h2 span {
-  text-decoration: underline;
+  position: relative;
+  line-height: 1;
+  border-bottom: 8px solid #212529;
 }
 
 .platform-grid-item {
@@ -898,6 +986,7 @@
   .reviews .swiper-container {
     margin-left: -15px;
     margin-right: -15px;
+    overflow: visible;
   }
 }
 

@@ -12,16 +12,20 @@ window.addEventListener('load', () => {
       spaceBetween: 25,
       breakpoints: {
         0: {
-          slidesPerView: 1.5,
+          slidesPerView: 1.75,
           centeredSlides: true,
           allowTouchMove: true,
           loop: true,
+          spaceBetween: 15
         },
         768: {
           slidesPerView: 3,
           centeredSlides: false,
           loop: false,
         },
+      },
+      pagination: {
+        el: '.features .swiper-pagination',
       },
     });
   }
@@ -52,6 +56,9 @@ window.addEventListener('load', () => {
           loop: false,
         }
       },
+      pagination: {
+        el: '.essentials .swiper-pagination',
+      },
     });
   }
 
@@ -81,6 +88,9 @@ window.addEventListener('load', () => {
           spaceBetween: 50,
           allowTouchMove: false
         }
+      },
+      pagination: {
+        el: '.reviews .swiper-pagination',
       },
     });
   }
